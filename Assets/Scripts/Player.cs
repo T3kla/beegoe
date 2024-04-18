@@ -3,21 +3,33 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float maxSpeed = 20;
+    [SerializeField] private float acceleration = 100;
+
+    private Rigidbody2D _rb = null;
+    private Vector2 _move = Vector2.zero;
+    
+    private void Awake()
     {
-        
+        _rb = GetComponent<Rigidbody2D>();
+
+
+        _rb.velocity += _move * acceleration * Time.deltaTime;
+
+        if (_rb.velocity.magnitude > maxSpeed)
+            _rb.velocity = _rb.velocity.normalized * maxSpeed;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        _rb.velocity += _move * (acceleration * Time.deltaTime);
+
+        if (_rb.velocity.magnitude > maxSpeed)
+            _rb.velocity = _rb.velocity.normalized * maxSpeed;
     }
 
-    void OnMove(InputValue value)
+    private void OnMove(InputValue value)
     {
-        var move = value.Get<Vector2>();
-        transform.position += new Vector3(move.x, move.y, 0);
+        _move = value.Get<Vector2>();
     }
 }
