@@ -167,20 +167,10 @@ TextureImporter:
         y: 2016
         width: 32
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.03125, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7, y: -3}
-        - {x: -6, y: -4}
-        - {x: -1, y: -4}
-        - {x: 7, y: -3}
-        - {x: 8, y: -2}
-        - {x: 8, y: 1}
-        - {x: 7, y: 2}
-        - {x: -1, y: 3}
-        - {x: -5, y: 3}
-        - {x: -7, y: 1}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -198,18 +188,10 @@ TextureImporter:
         y: 2016
         width: 32
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.03125, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -7, y: 1}
-        - {x: -7, y: -3}
-        - {x: -6, y: -4}
-        - {x: -1, y: -4}
-        - {x: 8, y: -3}
-        - {x: 8, y: 2}
-        - {x: -1, y: 3}
-        - {x: -5, y: 3}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -227,8 +209,8 @@ TextureImporter:
         y: 2000
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.0625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -7, y: -3}
@@ -260,8 +242,8 @@ TextureImporter:
         y: 2000
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.0625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -7, y: -3}
@@ -574,6 +556,7 @@ TextureImporter:
       spr_tree_5: -1420788026
       spr_tree_6: -1655872200
       spr_wasp: 679015068
+      spr_wasp_buff: -1416040409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
