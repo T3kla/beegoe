@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float miniTorqueMax = 5;
     [SerializeField] private float miniSpriteChangeSpeed = 1;
     [SerializeField] private float miniOrbitRadius = 1;
+    
 
     [Header("Shake")]
     [SerializeField] private float shakeMagnitude = 0.1f;
@@ -42,7 +43,11 @@ public class Player : MonoBehaviour
     private bool _firing = false;
     private float _torque = 0;
     private float _revolutions = 0;
-    
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource gunAudioSource;
+    [SerializeField] AudioSource buzzSource;
+
     // Input System
 
     private void OnMove(InputValue value)
@@ -123,6 +128,7 @@ public class Player : MonoBehaviour
             var bullet = Bullet.Spawn(bulletPrefab, miniMuzzle.position, miniMuzzle.rotation);
             bullet.GetComponent<Rigidbody2D>().velocity = miniMuzzle.right * bulletSpeed;
             miniMuzzleSpriteRenderer.sprite = mod == 0 ? sprMiniMuzzle1 : sprMiniMuzzle0;
+            gunAudioSource.Play();
         }
         else if (!_firing)
         {
@@ -130,5 +136,10 @@ public class Player : MonoBehaviour
         }
         
         cam.Shake = _torque * shakeMagnitude;
+    }
+
+    private void OnBuzz(InputValue value)
+    {
+        buzzSource.Play();
     }
 }
