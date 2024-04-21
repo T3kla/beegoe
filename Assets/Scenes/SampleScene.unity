@@ -621,6 +621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1762414376663197505, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8586528245205181713, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1096,15 +1100,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grassPrefab: {fileID: 5522221811375592125, guid: dcb8014ba085a3a469f374b2ec88157b, type: 3}
-  deadGrassPrefab: {fileID: 0}
+  deadGrassPrefab: {fileID: 5522221811375592125, guid: 0511ba6181ce3c547a0dd589f139f528, type: 3}
   ringCount: 4
   sectionCount: 12
   distPerRing: 6.5
   layerPerRing: 4
   centerMargin: 8
   skipFirstRing: 0
-  aliveRings: []
-  deadRings: []
+  aliveRings:
+  - {fileID: 1361619093}
+  - {fileID: 1442871276}
+  - {fileID: 1946554666}
+  - {fileID: 59868296}
+  deadRings:
+  - {fileID: 1170795841}
+  - {fileID: 759364953}
+  - {fileID: 920338068}
+  - {fileID: 1343082816}
 --- !u!1 &1946554666
 GameObject:
   m_ObjectHideFlags: 0
