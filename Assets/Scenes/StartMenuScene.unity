@@ -809,7 +809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1190489449
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1129,6 +1129,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - DOODLE_ON
   - PIXELATE_ON
   - WAVEUV_ON
   m_InvalidKeywords: []
@@ -1253,8 +1254,8 @@ Material:
     - _GreyscaleBlend: 1
     - _GreyscaleLuminosity: 0
     - _GreyscaleOutline: 0
-    - _HandDrawnAmount: 10
-    - _HandDrawnSpeed: 5
+    - _HandDrawnAmount: 1
+    - _HandDrawnSpeed: 1
     - _HitEffectBlend: 1
     - _HitEffectGlow: 5
     - _HologramBlend: 1
