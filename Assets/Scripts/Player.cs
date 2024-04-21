@@ -8,14 +8,25 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxSpeed = 20;
     [SerializeField] private float acceleration = 100;
     
+    private Rigidbody2D _rb = null;
+    private Vector2 _move = Vector2.zero;
+    
     [Header("Sprite")]
     [SerializeField] private SpriteRenderer sprite = null;
     [SerializeField] private float smootness = 0.01f;
 
-    private Rigidbody2D _rb = null;
     private UnityEngine.Camera _cam = null;
-    private Vector2 _move = Vector2.zero;
     private Vector2 _look = Vector2.zero;
+    
+    [Header("Shoot")]
+    [SerializeField] private Transform bulletPrefab = null;
+    [SerializeField] private Transform bulletOrigin = null;
+    [SerializeField] private float miniTorqueAcceleration = 10;
+    [SerializeField] private float miniTorqueMax = 100;
+
+    private bool _charging = false;
+    private bool _firing = false;
+    private float _charge = 0;
     
     // Input System
 
@@ -29,6 +40,16 @@ public class Player : MonoBehaviour
         _look = value.Get<Vector2>();
     }
 
+    private void OnFire(InputValue value)
+    {
+        _firing = value.Get<float>() > 0;
+    }
+
+    private void OnCharge(InputValue value)
+    {
+        _charging = value.Get<float>() > 0;
+    }
+
     //
     
     private void Awake()
@@ -40,6 +61,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Look();
+        Fire();
     }
 
     private void Move()
@@ -71,5 +93,11 @@ public class Player : MonoBehaviour
         
         sprite.transform.rotation = Quaternion.Euler(0, 0, newAngle);
         sprite.flipY = smoothAngle is > 90 and < 270;
+    }
+
+    private void Fire()
+    {
+        // if (_charging)
+            // _charge += _charging ?  
     }
 }
