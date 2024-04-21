@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoundTracker : MonoBehaviour
 {
-    int progress;
+    int health;
     bool enemiesRemaining;
     int currentRound;
 
@@ -24,7 +24,7 @@ public class RoundTracker : MonoBehaviour
 
     void CalculateProgress()
     {
-        progress += 20;
+        health += 20;
     }
 
     void ShowRingsByProgress()

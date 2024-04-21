@@ -11,7 +11,6 @@ public class MenuSceneChangeTrigger : MonoBehaviour
     private void OnBuzz(InputValue value)
     {
         startTimeline();
-        print("z");
     }
 
     private void startTimeline()

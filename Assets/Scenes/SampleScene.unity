@@ -625,6 +625,10 @@ PrefabInstance:
       propertyPath: bulletSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6617336397785157132, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
+      propertyPath: orthographic size
+      value: 7.6923075
+      objectReference: {fileID: 0}
     - target: {fileID: 8586528245205181713, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1019,7 +1023,7 @@ MonoBehaviour:
   - {fileID: 759364953}
   - {fileID: 920338068}
   - {fileID: 1343082816}
-  ring: 3
+  ring: 4
 --- !u!1 &1578288124
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class BackgroundGrassRings : MonoBehaviour
 {
-    int progressPerRing = 25;
+    int healthPerRing = 25;
 
     [SerializeField] GameObject[] aliveRings;
     [SerializeField] GameObject[] deadRings;
 
 
-    [SerializeField] int ring;
-    private void Update()
-    {
-        SetActiveRings(ring);
-    }
+    //[SerializeField] int ring;
+    //private void FixedUpdate()
+    //{
+    //    SetActiveRings(ring);
+    //}
 
-    public void GetActiveRingsByProgress(int progress)
+    public void GetActiveRingsByHealth(int health)    // pasar aqui vida
     {
-        SetActiveRings(progress / progressPerRing);
+        SetActiveRings(health / healthPerRing);
     }
 
     public void SetActiveRings(int ring)
