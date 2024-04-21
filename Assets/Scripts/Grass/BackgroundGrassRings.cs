@@ -9,10 +9,10 @@ public class BackgroundGrassRings : MonoBehaviour
 
 
     //[SerializeField] int ring;
-    //private void FixedUpdate()
-    //{
-    //    SetActiveRings(ring);
-    //}
+    private void Start()
+    {
+        SetActiveRings(4);
+    }
 
     public void GetActiveRingsByHealth(int health)    // pasar aqui vida
     {

@@ -24,6 +24,8 @@ namespace Enemies
         [Header("Attack")]
         [SerializeField] private float attackRate = 0.5f;
 
+        [Header("Sound")]
+        [SerializeField] private AudioSource hurtSound;
         private int _health = 0;
         private Rigidbody2D _rb = null;
         private bool _attacking = false;
@@ -67,6 +69,7 @@ namespace Enemies
             waspSpriteRenderer.sprite = hitSprite;
             yield return new WaitForSeconds(0.1f);
             waspSpriteRenderer.sprite = normalSprite;
+            hurtSound.Play();
         }
 
         public static Transform Spawn(Transform prefab, Vector3 position, Quaternion rotation)
