@@ -19,7 +19,6 @@ public class BackgroundGrassRings : MonoBehaviour
     public void GetActiveRingsByProgress(int progress)
     {
         SetActiveRings(progress / progressPerRing);
-        // 3 = out, 0 = in
     }
 
     public void SetActiveRings(int ring)
