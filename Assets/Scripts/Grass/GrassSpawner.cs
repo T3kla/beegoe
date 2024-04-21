@@ -10,27 +10,30 @@ public class GrassSpawner : MonoBehaviour
     [SerializeField] int ringCount;
     [SerializeField] int sectionCount;
     [SerializeField] float distPerRing;
+    [SerializeField] int layerPerRing;
     float anglePerSection;
+    int layers;
 
     [SerializeField] bool skipFirstRing;
 
     private void Start()
     {
         anglePerSection = 360 / ringCount;
+        layers = ringCount * layerPerRing;
         populateGrass();
     }
 
     private void populateGrass()
     {
-        for (int ring = skipFirstRing? 1 : 0 ; ring < ringCount; ring++)
+        for (int layer = skipFirstRing? layerPerRing : 0 ; layer < layers; layer++)
         {
-            if (ring % 2 != 0)
+            if (layer % 2 != 0)
             {
                 //Double the sections?
             }
             for (int section = 0; section < sectionCount; section++)
             {
-                var randDistance = Random.Range(distPerRing * ring, distPerRing * (ring + 1));
+                var randDistance = Random.Range(distPerRing / layerPerRing * layer, distPerRing / layerPerRing * (layer + 1));
                 var randAngle = Random.Range(anglePerSection * section, anglePerSection * (section + 1));
 
                 var position = Quaternion.Euler(0, 0, randAngle) * Vector3.right * randDistance;
