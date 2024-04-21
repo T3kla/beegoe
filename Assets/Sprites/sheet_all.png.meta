@@ -470,6 +470,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sheet_house
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1733
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e345c1e98566004daac6cf80a52e50c
+      internalID: 941051851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -481,7 +502,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sheet_all_0: 941051851
       sheet_all_11: 986537949
       sheet_all_13: 375305623
       sheet_all_15: -66477260
@@ -517,6 +537,7 @@ TextureImporter:
       sheet_all_5: -1283752502
       sheet_all_6: 336759989
       sheet_all_9: -38035137
+      sheet_house: 941051851
       spr_bee: 8633881525917383573
       spr_bullet_0: -1516497555
       spr_mini_0: -1771866121167276815
