@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enemies;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -31,6 +32,15 @@ public class Bullet : MonoBehaviour
     private IEnumerator Lifetime()
     {
         yield return new WaitForSeconds(5f);
+        gameObject.SetActive(false);
+    }
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        other.collider.GetComponent<Wasp>()?.Hit();
+        
+        Debug.Log($"My layer: {gameObject.layer}, other layer: {other.collider.gameObject.layer}");
+            
         gameObject.SetActive(false);
     }
 }

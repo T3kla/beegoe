@@ -129,8 +129,10 @@ GameObject:
   m_Component:
   - component: {fileID: 26917010}
   - component: {fileID: 26917011}
-  m_Layer: 0
-  m_Name: house
+  - component: {fileID: 26917013}
+  - component: {fileID: 26917012}
+  m_Layer: 8
+  m_Name: Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,11 +147,11 @@ Transform:
   m_GameObject: {fileID: 26917009}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.31, y: 1.81, z: -1}
+  m_LocalPosition: {x: 0.31, y: 1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1544618560}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &26917011
 SpriteRenderer:
@@ -205,6 +207,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &26917012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26917009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9510d8b536ab2524eacf9b70f91c972a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundGrassRings: {fileID: 1544618561}
+  health: 100
+  waspBasicPrefab: {fileID: 4627854599550173703, guid: e3f89621904777a4cb55c710e075450e, type: 3}
+  waspBasicSpawnRate: 2
+  waspBasicRadius: 30
+--- !u!58 &26917013
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26917009}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.57}
+  m_Radius: 2.9
 --- !u!1 &52788902
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +354,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -764,12 +819,16 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1762414376663197505, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
+      propertyPath: miniTorqueMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762414376663197505, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
       propertyPath: gunAudioSource
       value: 
       objectReference: {fileID: 1498757982}
     - target: {fileID: 6617336397785157132, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
       propertyPath: orthographic size
-      value: 7.6923075
+      value: 9.807693
       objectReference: {fileID: 0}
     - target: {fileID: 8586528245205181713, guid: fc0055b273b6f424c82885b0bdef3d20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1401,7 +1460,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 621160341}
-  - {fileID: 26917010}
   - {fileID: 1903308666}
   - {fileID: 1578288125}
   - {fileID: 1279583755}
@@ -1674,6 +1732,7 @@ SceneRoots:
   - {fileID: 1356464871}
   - {fileID: 924704307}
   - {fileID: 52788903}
+  - {fileID: 26917010}
   - {fileID: 1544618560}
   - {fileID: 108407322}
   - {fileID: 2077016769}

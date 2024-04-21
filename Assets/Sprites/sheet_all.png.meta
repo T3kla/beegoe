@@ -494,6 +494,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: spr_wasp_hit
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1984
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22b8f22b6795a14388c61977eb5629f
+      internalID: -1073600587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_wasp_buff
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1904
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aed866797ba0774a8abfa9b35f4d9a0
+      internalID: -1416040409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_wasp_buff_hit
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1904
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1858bf29a5e62f499780a2ef0238c4b
+      internalID: 550296244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -557,6 +620,8 @@ TextureImporter:
       spr_tree_6: -1655872200
       spr_wasp: 679015068
       spr_wasp_buff: -1416040409
+      spr_wasp_buff_hit: 550296244
+      spr_wasp_hit: -1073600587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

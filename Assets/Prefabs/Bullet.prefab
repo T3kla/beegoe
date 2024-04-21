@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9053961186864501731}
   - component: {fileID: 5307970500322183138}
   - component: {fileID: 5064212315832344221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291009484563734652}
   - component: {fileID: 2378978601878408328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

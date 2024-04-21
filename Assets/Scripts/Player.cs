@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
+    
     [SerializeField] private Cam cam = null;
     
     [Header("Movement")]
@@ -74,6 +76,7 @@ public class Player : MonoBehaviour
     
     private void Awake()
     {
+        Instance = this;
         _rb = GetComponent<Rigidbody2D>();
     }  
     
