@@ -194,7 +194,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 941051851, guid: febbe34a303edff489883af812d99a7a, type: 3}
+  m_Sprite: {fileID: -2035327065, guid: febbe34a303edff489883af812d99a7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -639,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 759364953}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -688,7 +688,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5832726086536130715, guid: 9cf5a72db08ed40478020272a4e6d501, type: 3}
+  m_Sprite: {fileID: 3715899885514829442, guid: 55ae85e041f1743418cf71b5d09475e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -860,6 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319404446}
+  - component: {fileID: 1319404447}
   m_Layer: 0
   m_Name: RoundTracker
   m_TagString: Untagged
@@ -882,6 +883,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1319404447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319404445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779e559fe90f20e47ac5242f1c45f963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrassRings: {fileID: 0}
 --- !u!1 &1343082816
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,7 +922,7 @@ Transform:
   m_GameObject: {fileID: 1343082816}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -957,7 +971,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3715899885514829442, guid: 55ae85e041f1743418cf71b5d09475e8, type: 3}
+  m_Sprite: {fileID: 5832726086536130715, guid: 9cf5a72db08ed40478020272a4e6d501, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1293,9 +1307,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1903308666}
   - {fileID: 621160341}
   - {fileID: 26917010}
+  - {fileID: 1903308666}
   - {fileID: 1578288125}
   - {fileID: 1279583755}
   m_Father: {fileID: 0}
@@ -1309,12 +1323,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544618558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42fbc086261b6ca4389358188e7f3128, type: 3}
+  m_Script: {fileID: 11500000, guid: e76c773cdc908a6448de4b7ba525121c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ring_1: {fileID: 759364953}
-  ring_2: {fileID: 920338068}
-  ring_3: {fileID: 1343082816}
+  aliveRings:
+  - {fileID: 1361619093}
+  - {fileID: 1442871276}
+  - {fileID: 1946554666}
+  - {fileID: 59868296}
+  deadRings:
+  - {fileID: 1170795841}
+  - {fileID: 759364953}
+  - {fileID: 920338068}
+  - {fileID: 1343082816}
+  ring: 3
 --- !u!1 &1578288124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,9 +1506,10 @@ MonoBehaviour:
   deadGrassPrefab: {fileID: 5522221811375592125, guid: 0511ba6181ce3c547a0dd589f139f528, type: 3}
   ringCount: 4
   sectionCount: 12
-  distPerRing: 8
+  distPerRing: 6.5
   layerPerRing: 4
-  skipFirstRing: 1
+  centerMargin: 2
+  skipFirstRing: 0
   aliveRings:
   - {fileID: 1361619093}
   - {fileID: 1442871276}

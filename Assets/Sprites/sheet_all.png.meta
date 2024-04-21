@@ -491,6 +491,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: house_small
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1734
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35ffabcf35dc1e4aaab7356eb67face
+      internalID: -2035327065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -502,6 +523,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      house_small: -2035327065
       sheet_all_11: 986537949
       sheet_all_13: 375305623
       sheet_all_15: -66477260
