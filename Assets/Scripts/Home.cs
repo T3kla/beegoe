@@ -1,6 +1,7 @@
 using System.Collections;
 using Enemies;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Home : MonoBehaviour
 {
@@ -41,6 +42,6 @@ public class Home : MonoBehaviour
         backgroundGrassRings.GetActiveRingsByHealth(health);
 
         if (health <= 0)
-            Debug.Log("Game Over");
+            SceneManager.LoadScene(0);
     }
 }

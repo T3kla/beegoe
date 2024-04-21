@@ -39,8 +39,6 @@ public class Bullet : MonoBehaviour
     {
         other.collider.GetComponent<Wasp>()?.Hit();
         
-        Debug.Log($"My layer: {gameObject.layer}, other layer: {other.collider.gameObject.layer}");
-            
         gameObject.SetActive(false);
     }
 }
