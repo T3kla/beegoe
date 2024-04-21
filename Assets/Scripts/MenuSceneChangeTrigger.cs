@@ -7,9 +7,11 @@ using UnityEngine.Playables;
 public class MenuSceneChangeTrigger : MonoBehaviour
 {
 
+    [SerializeField] AudioSource buzzSource;
 
     private void OnBuzz(InputValue value)
     {
+        buzzSource.Play();
         startTimeline();
     }
 
